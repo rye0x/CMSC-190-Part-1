@@ -1,0 +1,21 @@
+# LaTeX: keep only .tex, .pdf, assets/, and bib.bib in latex/
+latex/**
+!latex/*.tex
+!latex/*.pdf
+!latex/bib.bib
+!latex/assets/
+!latex/assets/**
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*$py.class
+```
+
+- This ignores everything under `latex/` except your source `.tex`, compiled `.pdf`, `bib.bib`, and everything in `latex/assets/`.
+- If you ever want to track `.bbl` as well, add:
+```gitignore
+!latex/*.bbl
+```
